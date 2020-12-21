@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Login
+    body
+        //- h1 Fasak
+        if(type=="error")
+            h3(style="color:red") #{message}
+        form(action="/login", method="post")
+            label(for="email") Email
+            input(type="email",name="email",placeholder="abcd@email.com")
+            br
+            label(for="password") Password
+            input(type="password", name="password")
+            br
+            input(type="submit")
+        div
+            a(href=`http://${process.env.HOST}:${process.env.PORT}/register`) Register 

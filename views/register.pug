@@ -1,0 +1,25 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Register
+    body
+        form(action="/register", method="post")
+            div
+                label(for="fullname") Fullname
+                input(type="text", name="fullname",placeholder="Fullname")
+            br
+            div
+                label(for="email") Email
+                input(type="email", name="email",placeholder="abcd@email.com")
+            br
+            div
+                label(for="password") Password
+                input(type="password",name="password")
+            div
+                label(for="male") Male
+                input(type="radio", name="gender",value="male")
+                label(for="female") Female
+                input(type="radio", name="gender",value="female")
+            br
+            button(type="submit") Submit
