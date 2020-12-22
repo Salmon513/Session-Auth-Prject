@@ -8,9 +8,7 @@ checkSignIn=(req,res,next)=>{
         next()  //If session exists, proceed to page
     }
     else{
-        // let err = new Error("Not logged in!")
-        // //console.log(req.session.user)
-        // next(err) 
+        
         res.render('showmessage',{message:"Error, trying to access unauthorized page",type:"error"})  //Error, trying to access unauthorized page
     }
 }
